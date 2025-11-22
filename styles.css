@@ -1,0 +1,487 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #121212;
+  color: #EEEFEF;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+.header {
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #C9A454;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 30px;
+}
+
+.nav-links a {
+  color: #EEEFEF;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 6px 10px;
+  border-radius: 14px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background: #C9A454;
+  color: #121212;
+}
+
+/* Menu toggle for mobile */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #C9A454;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  background-image: url('../images/hero-luxury-car.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #EEEFEF;
+  padding: 0 20px;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(18,18,18,0.8) 40%, rgba(18,18,18,0.95) 85%);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 36px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #C9A454;
+  color: #121212;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #a88639;
+  color: #f0e6b9;
+  box-shadow: 0 6px 8px rgba(201, 164, 84, 0.9);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #C9A454;
+  color: #C9A454;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #C9A454;
+  color: #121212;
+}
+
+/* BRANDS */
+.brands {
+  text-align: center;
+  margin: 80px 0;
+  color: #EEEFEF;
+}
+
+.brands h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  color: #C9A454;
+}
+
+.brand-logos {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.brand-logos img {
+  height: 60px;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.brand-logos img:hover,
+.brand-logos img:focus {
+  filter: grayscale(0%);
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* ADVANTAGES */
+.advantages {
+  margin-bottom: 80px;
+  color: #EEEFEF;
+}
+
+.advantages h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  color: #C9A454;
+  text-align: center;
+}
+
+.advantages-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.advantage-card {
+  background-color: #1B3A57;
+  padding: 30px 20px;
+  border-radius: 16px;
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(201, 164, 84, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.advantage-card:hover {
+  transform: translateY(-8px);
+}
+
+.advantage-card h3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #C9A454;
+}
+
+/* ICONS placeholders */
+.icon {
+  font-size: 40px;
+  color: #C9A454;
+  margin-bottom: 15px;
+}
+
+.icon-quality:before {
+  content: "✓";
+  font-weight: bold;
+}
+
+.icon-guarantee:before {
+  content: "⛑";
+  font-weight: bold;
+}
+
+.icon-financing:before {
+  content: "💰";
+  font-weight: bold;
+}
+
+/* FEATURED CARS */
+.featured-cars {
+  margin-bottom: 80px;
+  color: #EEEFEF;
+}
+
+.featured-cars h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #C9A454;
+}
+
+.car-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.car-card {
+  background-color: #1B3A57;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  max-width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-10px);
+}
+
+.car-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.car-card h3 {
+  font-family: 'Playfair Display', serif;
+  margin: 1rem 1rem 0.2rem;
+  color: #C9A454;
+}
+
+.car-card p {
+  margin: 0 1rem 1rem;
+  font-weight: 600;
+  color: #EEEFEF;
+}
+
+.car-card .btn {
+  margin: 0 1rem 1.3rem;
+  width: calc(100% - 2rem);
+  text-align: center;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  margin-bottom: 80px;
+  color: #DDD;
+}
+
+.testimonials h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #C9A454;
+}
+
+.testimonial-list {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background-color: #121212;
+  border-radius: 20px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 5px 15px rgba(201,164,84,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonial-photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 2px solid #C9A454;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #EEEFEF;
+}
+
+.testimonial-card footer {
+  font-weight: 700;
+  color: #C9A454;
+  font-size: 0.9rem;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #121212;
+  color: #AAA;
+  padding: 30px 20px;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-nav a {
+  margin-right: 18px;
+  color: #C9A454;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+  color: #EEEFEF;
+}
+
+.social-icons a {
+  margin-left: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.social-icons img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.social-icons a:hover img,
+.social-icons a:focus img {
+  filter: brightness(0) invert(0.8) sepia(1) saturate(5) hue-rotate(45deg);
+}
+
+/* Animations fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation-fill-mode: forwards;
+  animation-name: fadeInUp;
+  animation-duration: 0.8s;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #121212;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 20px 0;
+    border-top: 1px solid #C9A454;
+  }
+  
+  .nav-links.open {
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .advantages-list,
+  .car-cards,
+  .testimonial-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .advantage-card,
+  .car-card,
+  .testimonial-card {
+    max-width: 90%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
